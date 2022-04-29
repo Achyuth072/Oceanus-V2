@@ -14,6 +14,7 @@ export default function Home(){
     const [fishGrade, setFishGrade] = useState('');
     const [nofBoxes, setNofBoxes] = useState('');
     const [position, setPosition] = useState('');
+    const [formValues, setFormValues] = useState([{ fishType: "", fishCategory : "", fishGrade :"", nofBoxes :"", position :""}])
 
     let trawlingDetails =(e)=>{
         e.preventDefault();
@@ -32,7 +33,18 @@ export default function Home(){
           ]  
         })
 
+    };
+
+    let handleChange = (i, e) => {
+        let newFormValues = [...formValues];
+        newFormValues[i][e.target.name] = e.target.value;
+        setFormValues(newFormValues);
     }
+
+    let fdetails = ()=>{
+        setFormValues([...formValues, { fishType: "", fishCategory : "", fishGrade :"", nofBoxes :"", position :"" }])
+    }
+
 
     const [showMe, setShowMe] = useState(false);
     function toggle(){
@@ -71,87 +83,97 @@ export default function Home(){
                             <img className={styles.logout} src="https://lh3.googleusercontent.com/OIl29IJ9Wv2lrIiHR8xvJ8ibhYkASkMmBqnDDshUIyTv96mxOOiv-_J19rOihZ0iZCk9HjbfvwQjszVAPDJ6MFBP6uMjp9gZJnH3k1l_FJ6CN-nGgQWDn7oClwRk0Rv4SY-1kRI5qwA=w30-h36-p-k" />
                         </p>
                     </div>
-                    <div style={{ display: showMe?"block":"none"}}>
-                        <form className={styles.formbox1} onSubmit={trawlingDetails}>
-                            <div className={styles.left}>
-                                <label className={styles.label1}>Trawling Number</label><br />
-                                <div className={styles.tnum}>
-                                    <input className={styles.tbox} type="text" id="t1" name="tnum" value="13AD" />
+                    <div style={{ display: showMe?"block":"none"}} >
+                        <form className={styles.formbox1} onSubmit={trawlingDetails}>                        
+                                <div className={styles.left}>
+                                    <label className={styles.label1}>Trawling Number</label><br />
+                                    <div className={styles.tnum}>
+                                        <input className={styles.tbox} type="text" id="t1" name="tnum" defaultValue="13AD" value={trawlingNumber} onChange={e => setTrawlingNumber(e.target.value)} />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.left}>
-                                <label className={styles.label2}>Trawling Date</label>
-                                <div className={styles.tdate}>
-                                    <input className={styles.tbox} type="text" id="t2" name="tdate" value="17-03-2022" />
+                                <div className={styles.left}>
+                                    <label className={styles.label2}>Trawling Date</label>
+                                    <div className={styles.tdate}>
+                                        <input className={styles.tbox} type="text" id="t2" name="tdate" defaultValue="17-03-2022" value={trawlingDate} onChange={e => setTrawlingDate(e.target.value)} />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.left}>
-                                <label className={styles.label3}>Total Volume</label>
-                                <div className={styles.tvol}>
-                                    <input className={styles.tbox} type="text" id="t3" name="tvol" value="1000" />
+                                <div className={styles.left}>
+                                    <label className={styles.label3}>Total Volume</label>
+                                    <div className={styles.tvol}>
+                                        <input className={styles.tbox} type="text" id="t3" name="tvol" defaultValue="1000" value={totalVolume} onChange={e => setTotalVolume(e.target.value)} />
+                                    </div>
                                 </div>
-                            </div>                        
-                            <div className={styles.left}>
-                                <div className={styles.bar}>
-                                    <label className={styles.label4}>type</label>
-                                    <label className={styles.label5}>category</label>
-                                    <label className={styles.label6}>Grade</label>
-                                    <label className={styles.label7}>No of Boxes</label>
-                                    <label className={styles.label8}>positions</label>
+                                <div className={styles.left}>
+                                    <div className={styles.bar}>
+                                        <label className={styles.label4}>type</label>
+                                        <label className={styles.label5}>category</label>
+                                        <label className={styles.label6}>Grade</label>
+                                        <label className={styles.label7}>No of Boxes</label>
+                                        <label className={styles.label8}>positions</label>
+                                    </div>
                                 </div>
-                                <select className={styles.d1}>
-                                    <option>Bluefin Tuna</option>
-                                    <option>Angelfish</option>
-                                    <option>Catfish</option>
-                                </select>                                
-                                <select className={styles.d2}>
-                                    <option>BFT1</option>
-                                    <option>BFT2</option>
-                                    <option>BFT3</option>
-                                    <option>AF1</option>
-                                    <option>AF2</option>
-                                    <option>AF3</option>
-                                    <option>CF1</option>
-                                    <option>CF2</option>
-                                    <option>CF3</option>
-                                </select>                                
-                                <select className={styles.d3}>
-                                    <option>A</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                </select>                                
-                                <input className={styles.d4} type="text" />                               
-                                <select className={styles.d5}>
-                                    <option>S1F1Sl1</option>
-                                    <option>S1F1Sl2</option>
-                                    <option>S1F1Sl3</option>
-                                    <option>S1F1Sl4</option>
-                                    <option>S1F1Sl5</option>
-                                    <option>S1F2Sl1</option>
-                                    <option>S1F2Sl2</option>
-                                    <option>S1F2Sl3</option>
-                                    <option>S1F2Sl4</option>
-                                    <option>S1F2Sl5</option>
-                                    <option>S1F3Sl1</option>
-                                    <option>S1F3Sl2</option>
-                                    <option>S1F3Sl3</option>
-                                    <option>S1F3Sl4</option>
-                                    <option>S1F3Sl5</option>
-                                    <option>S2F1Sl1</option>
-                                    <option>S2F1Sl2</option>
-                                    <option>S2F1Sl3</option>
-                                    <option>S2F1Sl4</option>
-                                    <option>S2F1Sl5</option>
-                                    <option>S2F2Sl1</option>
-                                    <option>S2F2Sl2</option>
-                                    <option>S2F2Sl3</option>
-                                    <option>S2F2Sl4</option>
-                                    <option>S2F2Sl5</option>
-                                </select>
-                                <div>
-                                    <input className={styles.b1} type="submit" id="b1" value="ADD" />
-                                </div>
-                            </div>
+                                {formValues.map((element, index) =>(
+                                        <div className={styles.left} key={index}>                                            
+                                            <select className={styles.d1} defaultValue={element.fishType || ""} onChange={e => handleChange(index, e)}>
+                                                <option>Bluefin Tuna</option>
+                                                <option>Angelfish</option>
+                                                <option>Catfish</option>
+                                            </select>                                
+                                            <select className={styles.d2} defaultValue={element.fishCategory || ""} onChange={e => handleChange(index, e)}>
+                                                <option>BFT1</option>
+                                                <option>BFT2</option>
+                                                <option>BFT3</option>
+                                                <option>AF1</option>
+                                                <option>AF2</option>
+                                                <option>AF3</option>
+                                                <option>CF1</option>
+                                                <option>CF2</option>
+                                                <option>CF3</option>                                                
+                                            </select>                                
+                                            <select className={styles.d3} defaultValue={element.fishGrade || ""} onChange={e => handleChange(index, e)}>
+                                                <option>A</option>
+                                                <option>B</option>
+                                                <option>C</option>
+                                            </select>                                
+                                            <input className={styles.d4} type="text" defaultValue={element.nofBoxes || ""} onChange={e => handleChange(index, e)} />                               
+                                            <select className={styles.d5} defaultValue={element.position || ""} onChange={e => handleChange(index, e)}>
+                                                <option>S1F1Sl1</option>
+                                                <option>S1F1Sl2</option>
+                                                <option>S1F1Sl3</option>
+                                                <option>S1F1Sl4</option>
+                                                <option>S1F1Sl5</option>
+                                                <option>S1F2Sl1</option>
+                                                <option>S1F2Sl2</option>
+                                                <option>S1F2Sl3</option>
+                                                <option>S1F2Sl4</option>
+                                                <option>S1F2Sl5</option>
+                                                <option>S1F3Sl1</option>
+                                                <option>S1F3Sl2</option>
+                                                <option>S1F3Sl3</option>
+                                                <option>S1F3Sl4</option>
+                                                <option>S1F3Sl5</option>
+                                                <option>S2F1Sl1</option>
+                                                <option>S2F1Sl2</option>
+                                                <option>S2F1Sl3</option>
+                                                <option>S2F1Sl4</option>
+                                                <option>S2F1Sl5</option>
+                                                <option>S2F2Sl1</option>
+                                                <option>S2F2Sl2</option>
+                                                <option>S2F2Sl3</option>
+                                                <option>S2F2Sl4</option>
+                                                <option>S2F2Sl5</option>                                        
+                                            </select>                         
+                                        </div>
+                                ))}                        
+                                
+                                <div className={styles.left}>
+                                        <div>
+                                                <input className={styles.b1} type="button" id="b1" value="ADD" onClick={fdetails} />
+                                        </div>
+                                        <div>
+                                                <input className={styles.b1} type="submit" id="b1" value="SAVE" />
+                                        </div>
+                                </div>            
                         </form>
                     </div>
                 </div>
