@@ -88,11 +88,11 @@ export default function Login() {
 
           <div className={styles.body}>
               <div className={styles.lbox}>
-                    <img src="https://lh3.googleusercontent.com/pzUZ2qGEhsmPP69b-P6oH8SqoSkGDjjdr9KnRN5uYpKQf0NcJri_QB5PZqlHR4e4FGr4lrR9AiK5ZBMn1RH1556aucFLBFBUpGxez-3B9zmvpWB3DDV0kt-wpiHFPkv56jUxNbOp6Dg=w2400"  />
+                    <img src="https://lh3.googleusercontent.com/pzUZ2qGEhsmPP69b-P6oH8SqoSkGDjjdr9KnRN5uYpKQf0NcJri_QB5PZqlHR4e4FGr4lrR9AiK5ZBMn1RH1556aucFLBFBUpGxez-3B9zmvpWB3DDV0kt-wpiHFPkv56jUxNbOp6Dg=w2400" referrerPolicy="no-referrer"/>
                  </div>
               <div className={styles.rbox}>
                   <p className={styles.logo}>
-                          <img src="https://lh3.googleusercontent.com/LyIKxlC8U3FzfX_LbDB0SJjUFY3Pg6_9uIoSM9l87csKnoX2IsMiP6XR4LkmTRdxUhSfLGp--Qp0fPoAUFzVCuO3DtgklC4o6JsVTD1dSY-nEvMYiWbMUqSbBfys4oGl8-Fkxn1TbrM=w2400"  />
+                          <img src="https://lh3.googleusercontent.com/LyIKxlC8U3FzfX_LbDB0SJjUFY3Pg6_9uIoSM9l87csKnoX2IsMiP6XR4LkmTRdxUhSfLGp--Qp0fPoAUFzVCuO3DtgklC4o6JsVTD1dSY-nEvMYiWbMUqSbBfys4oGl8-Fkxn1TbrM=w2400" referrerPolicy="no-referrer"  />
                           
                       </p>
                   <p className={styles.logint}>

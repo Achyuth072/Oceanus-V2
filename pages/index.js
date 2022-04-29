@@ -64,7 +64,7 @@ export default function Home(){
             <div className={styles.body}>
                 <div className={styles.lbox}>
                     <p className={styles.logo}>
-                        <img src="https://lh3.googleusercontent.com/LyIKxlC8U3FzfX_LbDB0SJjUFY3Pg6_9uIoSM9l87csKnoX2IsMiP6XR4LkmTRdxUhSfLGp--Qp0fPoAUFzVCuO3DtgklC4o6JsVTD1dSY-nEvMYiWbMUqSbBfys4oGl8-Fkxn1TbrM=w2400" />
+                        <img src="https://lh3.googleusercontent.com/LyIKxlC8U3FzfX_LbDB0SJjUFY3Pg6_9uIoSM9l87csKnoX2IsMiP6XR4LkmTRdxUhSfLGp--Qp0fPoAUFzVCuO3DtgklC4o6JsVTD1dSY-nEvMYiWbMUqSbBfys4oGl8-Fkxn1TbrM=w2400" referrerPolicy="no-referrer" />
                     </p>
                     <p className={styles.sidebar}>
                         <button className={styles.button1} id='b2' onClick={toggle}>Daily Catch</button>            
@@ -74,13 +74,13 @@ export default function Home(){
                 <div className={styles.rbox}>
                     <div>
                         <p>
-                            <img className={styles.search} src="https://lh3.googleusercontent.com/b1jvyyu5nD62ZbbBOM1iduXFhGkMXwjJxjHVOB72U4tNdtVk38wdSaSrn1KSWT0PL0DdNit9Lx96ys7VIZPJrUpXtTNQG6NVx_UVysAqee8zOMHx9tWcO2X9_b31AP4wTxPbSWkWivA=s33-p-k" /> 
+                            <img className={styles.search} src="https://lh3.googleusercontent.com/b1jvyyu5nD62ZbbBOM1iduXFhGkMXwjJxjHVOB72U4tNdtVk38wdSaSrn1KSWT0PL0DdNit9Lx96ys7VIZPJrUpXtTNQG6NVx_UVysAqee8zOMHx9tWcO2X9_b31AP4wTxPbSWkWivA=s33-p-k" referrerPolicy="no-referrer" /> 
                         </p>
                         <p>
-                            <img className={styles.settings} src="https://lh3.googleusercontent.com/1rwis3j3fN0oa-QWTH4NxHx135dGnBZzEYbvOp-PArR9Oz72DfPe2-rtvMVMQGUS7852q3_1BoPHyumz6ve0xH-seH4uhZxVZ5lKiBiFxE4Q4d6AVs4akKcTVKyt6PebQ5mRsJuj4SM=w33-h34-p-k" /> 
+                            <img className={styles.settings} src="https://lh3.googleusercontent.com/1rwis3j3fN0oa-QWTH4NxHx135dGnBZzEYbvOp-PArR9Oz72DfPe2-rtvMVMQGUS7852q3_1BoPHyumz6ve0xH-seH4uhZxVZ5lKiBiFxE4Q4d6AVs4akKcTVKyt6PebQ5mRsJuj4SM=w33-h34-p-k" referrerPolicy="no-referrer" /> 
                         </p>
                         <p>
-                            <img className={styles.logout} src="https://lh3.googleusercontent.com/OIl29IJ9Wv2lrIiHR8xvJ8ibhYkASkMmBqnDDshUIyTv96mxOOiv-_J19rOihZ0iZCk9HjbfvwQjszVAPDJ6MFBP6uMjp9gZJnH3k1l_FJ6CN-nGgQWDn7oClwRk0Rv4SY-1kRI5qwA=w30-h36-p-k" />
+                            <img className={styles.logout} src="https://lh3.googleusercontent.com/OIl29IJ9Wv2lrIiHR8xvJ8ibhYkASkMmBqnDDshUIyTv96mxOOiv-_J19rOihZ0iZCk9HjbfvwQjszVAPDJ6MFBP6uMjp9gZJnH3k1l_FJ6CN-nGgQWDn7oClwRk0Rv4SY-1kRI5qwA=w30-h36-p-k" referrerPolicy="no-referrer" />
                         </p>
                     </div>
                     <div style={{ display: showMe?"block":"none"}} >
